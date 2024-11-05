@@ -1,0 +1,9 @@
+The application should manage garden and their plants
+The application should save information for garden
+Garden has the following field (id , name and size )
+The application should save information about plants
+Plant has the following field (id , name ,plantDate and type )
+Each plant is related to one Garden
+One Garden can have many plants
+Each entity should have CRUD operation(Garden and Plant)
+Their should be a way to retrieved all plant sorted by name and PlantDate
