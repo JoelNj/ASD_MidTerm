@@ -39,17 +39,13 @@ public class GardenvegetableApplication {
 			Plant plant1 = new Plant("Basil","Herb", LocalDate.of(2024,4,5));
 			plant1.setGardenId(gardenService.getGardenById(2));
 			System.out.println(gardenService.getGardenById(2));
-//			Plant plant2 = new Plant("Carrot","Vegetable",LocalDate.of(2024,2,20));
-//            plant2.setGardenId(gardenService.getGardenById(1));
-//			Plant plant3 = new Plant("Tomato","Vegetable",LocalDate.of(2024,3,10));
-			//plantService.add(plant1);
-//			plantService.add(plant2);
-//			plantService.add(plant3);
-		};
-	 }
-     @Bean
-	 CommandLineRunner commandLineRunner2(){
-		return Args->{
+			Plant plant2 = new Plant("Carrot","Vegetable",LocalDate.of(2024,2,20));
+            plant2.setGardenId(gardenService.getGardenById(1));
+			Plant plant3 = new Plant("Tomato","Vegetable",LocalDate.of(2024,3,10));
+			plantService.add(plant1);
+			plantService.add(plant2);
+			plantService.add(plant3);
+
 			System.out.println("display all gardens");
 			List<Garden> gardens = gardenService.displayAll();
 			gardens.forEach(g->System.out.println(g));
@@ -57,6 +53,9 @@ public class GardenvegetableApplication {
 			plantService.displayAllPlantSortedByName().forEach(p->System.out.println(p));
 			System.out.println("Display All plants (Sorted by plant Date)");
 			plantService.displayAllPlantSortedByPlantDate().forEach(p->System.out.println(p));
+
+
 		};
 	 }
+
 }

@@ -15,7 +15,7 @@ public class PantServiceImplementation implements PlantService{
     @Override
     public Optional<Plant> add(Plant plant) {
         Plant plantSaved = plantRepository.save(plant);
-        return Optional.of(plant);
+        return Optional.of(plantSaved);
     }
 
     @Override

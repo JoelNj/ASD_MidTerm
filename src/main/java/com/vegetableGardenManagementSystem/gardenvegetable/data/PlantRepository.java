@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-@Repository
+
 public interface PlantRepository extends JpaRepository<Plant,Integer> {
 
     Optional<Plant> findByName(String name);
